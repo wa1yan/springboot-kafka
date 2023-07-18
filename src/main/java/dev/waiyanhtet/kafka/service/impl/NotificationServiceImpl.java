@@ -1,20 +1,22 @@
 package dev.waiyanhtet.kafka.service.impl;
 
-import dev.waiyanhtet.kafka.api.request.Employee;
+import dev.waiyanhtet.kafka.dto.Employee;
 import dev.waiyanhtet.kafka.service.NotificationService;
-import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class NotificationServiceImpl implements NotificationService {
 
     @Autowired
-    private KafkaTemplate<String, Object> employeeKafkaTemplate;
+    private KafkaTemplate<String, Object> kafkaTemplate;
 
     @Override
     public void sendNotification(Employee employee) {
-        employeeKafkaTemplate.send("employeeTopic", employee);
+        log.info(employee.toString());
+        kafkaTemplate.send("my-topic", employee);
     }
 }

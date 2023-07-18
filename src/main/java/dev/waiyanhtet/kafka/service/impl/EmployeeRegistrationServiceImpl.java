@@ -1,6 +1,6 @@
 package dev.waiyanhtet.kafka.service.impl;
 
-import dev.waiyanhtet.kafka.api.request.Employee;
+import dev.waiyanhtet.kafka.dto.Employee;
 import dev.waiyanhtet.kafka.service.NotificationService;
 import dev.waiyanhtet.kafka.service.RegistrationService;
 import lombok.RequiredArgsConstructor;

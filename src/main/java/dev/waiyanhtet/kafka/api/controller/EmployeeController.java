@@ -1,6 +1,6 @@
 package dev.waiyanhtet.kafka.api.controller;
 
-import dev.waiyanhtet.kafka.api.request.Employee;
+import dev.waiyanhtet.kafka.dto.Employee;
 import dev.waiyanhtet.kafka.service.RegistrationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
